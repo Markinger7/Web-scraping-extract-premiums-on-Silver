@@ -1,5 +1,5 @@
 # Web-scraping-to-extract-premiums-on-Silver
-There are always premiums attached to buying precious metals physically. Generally, it is closer to the spot price for gold than for silver. During the corona crisis the premiums for silver have increased a lot. So, it would be interesting to see how the premiums of silver a changing over time.
+There are always premiums attached to buying precious metals physically. Generally, it is closer to the spot price for gold than for silver. During the corona crisis the premiums for silver have increased a lot. So, it would be interesting to see how the premiums of silver are changing over time.
 
 I’ve been manually downloading the html of a website (<a href='https://www.gold.de/aufgeldtabelle/silber/'>Gold.de</a>), where the premiums of silver are shown for different products.
 
