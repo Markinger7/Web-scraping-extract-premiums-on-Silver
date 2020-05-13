@@ -51,7 +51,7 @@ df = df.iloc[1:]
 # drop missing values 
 df.dropna(axis = 1, how = 'all', inplace = True)
 df.dropna(axis = 0, how = 'all', inplace = True)
-# there are different columns that can be droped that aren't in each scrapping event
+# there are different columns that can be droped that aren't in each scraping event
 if 'Aufgeld in %.1' in df.columns.values:
     df.drop(columns = 'Aufgeld in %.1', inplace = True)
 # remove a row which can be clicked to enlarge the table on the website 
