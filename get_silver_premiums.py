@@ -60,7 +60,7 @@ df.drop(index = df[df['Rang']=="Gesamte Aufgeldtabelle anzeigen"].index.values, 
 df.rename(columns = {'Produktbezeichnung':'Product', 'Produktpreis':'Price in EUR', 'Preis/kg':'Price/kg', 
                      'Preis/oz':'Price/oz', 'Preis/g':'Price/g', 'Aufgeld in %':'Premiums in %'}, inplace = True)
 # transform strings to make them into a float
-df['Price in EUR'] = df['Price  in EUR'].map(lambda x: str(x).replace('EUR', '').strip().replace('.', '').replace(',','.'))
+df['Price in EUR'] = df['Price in EUR'].map(lambda x: str(x).replace('EUR', '').strip().replace('.', '').replace(',','.'))
 df['Price/kg'] = df['Price/kg'].map(lambda x: str(x).replace('EUR', '').strip().replace('.', '').replace(',','.'))
 df['Price/oz'] = df['Price/oz'].map(lambda x: str(x).replace('EUR', '').strip().replace('.', '').replace(',','.'))
 df['Price/g'] = df['Price/g'].map(lambda x: str(x).replace('EUR', '').strip().replace('.', '').replace(',','.'))
