@@ -3,7 +3,7 @@ There are always premiums attached to buying precious metals physically. General
 
 I’ve been manually downloading the html of a website (<a href='https://www.gold.de/aufgeldtabelle/silber/'>Gold.de</a>), where the premiums of silver are shown for different products.
 
-## files
+## Files
 This repo contains a python script (<b>get_silver_premiums.py</b>) that downloads the data from the website, transforms it into a pandas DataFrame and gives you a csv file with the cleaned data.
 The script needs to be activated from an environment which has python, pandas and numpy installed.
 The goal is that the script runs each day automatically.
