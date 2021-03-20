@@ -1,4 +1,4 @@
-# releveant imports
+# relevant imports
 import os
 import re
 import time
@@ -13,11 +13,11 @@ pd.options.mode.chained_assignment = None
 
 
 # create folder for the HTMLs
-folder_html = 'Gold_de'
+folder_html = '/Users/markusmuller/python/PM/Gold_de'
 if not os.path.exists(folder_html):
     os.makedirs(folder_html)
 # create folder for CSVs
-folder_csv = 'Gold_de_csv'
+folder_csv = '/Users/markusmuller/python/PM/Gold_de_csv'
 if not os.path.exists(folder_csv):
     os.makedirs(folder_csv)
 
@@ -54,6 +54,8 @@ df.dropna(axis = 0, how = 'all', inplace = True)
 # there are different columns that can be droped that aren't in each scraping event
 if 'Aufgeld in %.1' in df.columns.values:
     df.drop(columns = 'Aufgeld in %.1', inplace = True)
+if 'Unnamed: 8' in df.columns.values:
+        df.drop(columns = 'Unnamed: 8', inplace = True)
 # remove a row which can be clicked to enlarge the table on the website 
 df.drop(index = df[df['Rang']=="Gesamte Aufgeldtabelle anzeigen"].index.values, inplace = True)
 # rename columns 
@@ -75,7 +77,7 @@ df['Premiums in %'] = df['Premiums in %'].astype('float')
 # Output path
 path_to_csv = folder_csv + '/' + file_name + date_today.strftime('%d.%m.%Y') + end_csv
 # save cleand DataFrame
-df.to_csv(path_to_csv)
+df.to_csv(path_to_csv, index = None)
 
 # check if file exists
 print(os.path.isfile(path_to_csv))
