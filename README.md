@@ -3,6 +3,10 @@ There are always premiums attached to buying precious metals physically. General
 
 I’ve been manually downloading the html of a website (<a href='https://www.gold.de/aufgeldtabelle/silber/'>Gold.de</a>), where the premiums of silver are shown for different products.
 
+As of 20.03.2021 I finally implemented a cron job, so now I dont have to manually run the script:
+`0 10 * * * /Users/markusmuller/miniforge3 /User/markusmueller/python/PM/get_silver_premiums.py`
+Everyday at 10:00 AM the script will run automatically
+
 ## Files
 This repo contains a python script (<b>get_silver_premiums.py</b>) that downloads the data from the website, transforms it into a pandas DataFrame and gives you a csv file with the cleaned data.
 The script needs to be activated from an environment which has python, pandas and numpy installed.
